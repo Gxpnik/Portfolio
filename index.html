@@ -2,139 +2,163 @@
 <html>
 
 <head>
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: gray;
-            color: white;
-            text-align: center;
-            padding: 10px;
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+        body, html {
+            height: 100%;
+            color: #777;
+            line-height: 1.8;
         }
+
+        /* Create a Parallax Effect */
+        .logo-img, .bgimg-2, .bgimg-3 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* First image (Logo. Full height) */
+        .logo-img {
+            background-image: url("Images/Background_logo.jpg");
+            min-height: 1000px;
+        }
+        /* Second image (Portfolio) */
+        .bgimg-2 {
+            background-image: url("Images/Background_portfolio.jpg");
+            min-height: 700px;
+        }
+        /* Third image (Contact) */
+        .bgimg-3 {
+            background-image: url("Images/Background_contact.jpg");
+            min-height: 700px;
+        }
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
     </style>
     <header>
-        <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                    <span class="fs-4">My Portfolio</span>
-                </a>
-
-                <button class="button-12" role="button" onclick="switchToAbout()">About</button>
-                <script>
-                    function switchToAbout() {
-                        document.getElementById("work").style.display = "none";
-                        document.getElementById("about").style.display = "block";
-                        document.getElementById("contact").style.display = "none";
-                    }
-                </script>
-
-                <button class="button-12" role="button" onclick="switchToWork()">Work</button>
-                <script>
-                    function switchToWork() {
-                        document.getElementById("about").style.display = "none";
-                        document.getElementById("work").style.display = "block";
-                        document.getElementById("contact").style.display = "none";
-                    }
-                </script>
-
-                <button class="button-12" role="button" onclick="switchToContact()">Contact Me</button>
-                <script>
-                    function switchToContact() {
-                        document.getElementById("work").style.display = "none";
-                        document.getElementById("contact").style.display = "block";
-                        document.getElementById("about").style.display = "none";
-                    }
-                </script>
-            </header>
-        </div>
+        <div class="w3-top">
+            <div class="w3-bar" id="myNavbar">
+              <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+              </a>
+              <a href="#home" class="w3-bar-item w3-button">HOME</a>
+              <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+              <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+              <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>          
+          </div>
     </header>
 
 </head>
 
 <body>
     <main>
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p style="font-family:georgia,garamond,serif;font-size:16px;font-style:italic;font-size: large;">"The quieter you become, the more you are able to hear"</p>
-                <p></p>
-                <p>
-                    Hello! My name is Rodrigo and I'm a 20-year-old who loves to learn new things every day. I'm always striving to improve myself with no limits to what I can achieve.
-                </p>
-                <p>
-                    When I'm not studying, you can usually find me indulging in my two favorite hobbies: gaming and learning at my own pace. I have a passion for operating systems, especially Linux, and enjoy helping others fix their IT problems. Not only does it help them,
-                    but it also allows me to continue learning in the process.
-                </p>
-                <p>
-                    I'm also a big animal lover and have a soft spot for cats. I love spending time with my furry friends and playing with them.
-                </p>
-                <p>
-                    Overall, I believe in living life to the fullest and experiencing everything that the world has to offer.
-                </p>
-
+        <div class="logo-img w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME <span class="w3-hide-small">!!!</span>
             </div>
-        </section>
-
-        <section id="work" style="display: none;">
-            <div class="container">
-                <h2>My Work</h2>
+        </div>
+        <div class="w3-container w3-padding-64" id="about">
+            <h3 class="w3-content w3-center">ABOUT ME</h3>
+            <p class="w3-content w3-center"><em>I love learning</em></p>
+            <p class="w3-content">Hello! My name is Rodrigo and I'm a 20-year-old who loves to learn new things every day. I'm always striving to improve myself with no limits to what I can achieve.
+            </p>
+            <div class="w3-row w3-content">
+              <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>Rodrigo</b></p><br>
+                <img src="Images/avatar_coding.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+            </div>
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
                 <p>I'm currently studing Web Development, being this one of the projects that is helping me study. I'm also studying Linux, being Arch my main distro at the moment. I currently work as an IT helper but I hope to use it as a method of learning
                     more about softwares and Operation Systems.
+
+                    <p>I have a CCNA in "Introduction to Networks" that I took while taking a level 5 course in Management of Networks and Computer Systems.</p>
+                    <p>I also have a certification in 'Python Essentials 1', aiming to take more about it and other languages.</p>
+                    <p>My current objectives are:</p>
+
+                    <ul>
+                        <li>Learning JavaScript <i class='bx bxl-javascript bx-sm'></i> and CSS <i class='bx bxl-css3 bx-sm' ></i> </li>
+                        <li>Keep studying about Operating Systems</li>
+                        <li>Learn a bit more about python<i class='bx bxl-python bx-sm'></i></li>
+                        <li>Start learning MySQL and how to make it work with a website</li>
+                    </ul>
 
                     <p>You can find more about me <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/">here</a>.</p>
 
                 </p>
             </div>
-        </section>
+        </div>
 
-        <section id="contact" style="display: none;">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <p>You can contact me via:</p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/">LinkedIn</a></li>
-                </ul>
+        <p class="w3-content w3-large w3-center w3-padding-16">My knowledge is currently: </p>
+        <p class="w3-content w3-wide"><i class="fa fa-camera"></i>IT Support</p>
+        <div class="w3-content w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+        </div>
+        <p class="w3-content w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+        <div class="w3-content w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:55%">55%</div>
+        </div>
+        <p class="w3-content w3-wide"><i class="fa fa-photo"></i>Programming</p>
+        <div class="w3-content w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:40%">40%</div>
+        </div><br><br>
+
+        <div class="bgimg-2 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+              <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
             </div>
-        </section>
+        </div>
+        
+        <div class="w3-content w3-container w3-padding-64" id="portfolio">
+            <h3 class="w3-center">MY WORK</h3>
+            <p class="w3-center"><em>(Still in Development)</em></p>
+        </div>
+
+        <div class="bgimg-3 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle">
+               <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+            </div>
+        </div>
+
+        <div class="w3-content w3-container w3-padding-64" id="contact">
+            <h3 class="w3-center">CONTACT ME!!</h3>
+            <p class="w3-center"><em>I'd love your feedback!</em></p>
+          
+            <div class="w3-row w3-padding-32 w3-section">
+              <div class="w3-col m4 w3-container">
+                <img src="Images/Contact_Me.png" class="w3-image w3-round" style="width:100%">
+              </div>
+              <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class='bx bx-envelope bx-sm'></i> Email: rodrigo.n.dias2012@gmail.com<br>
+                    <i class='bx bxl-linkedin-square'></i> LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/">here</a>
+                </div>
+                <p>Leave me a note:</p>
+                <form action="/action_page.php" target="_blank">
+                  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                    </div>
+                    <div class="w3-half">
+                      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                    </div>
+                  </div>
+                  <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                  <button class="w3-button w3-black w3-right w3-section" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          
     </main>
-
-    <footer>
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2023, Rodrigo Dias</span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
-                    <a class="text-body-secondary" href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/">
-                        <svg class="bi" width="24" height="24">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARFJREFUSEvtlcFNw0AQRd+vgJRAOMARqADogBI4I3FAooBQABJC4kwJiA5IB+SWA4fQAWmAjwatrY1jYWmXcMqeLNvz3ujPri02vLRhPmsC23vAl6TFX8hXBLYfgKsEvpN0UytpBbYPgHkHuCvpo0YyJBjXRtWN6BG4TB3fS7qu6T5q+4a8n4b8XgtfE9g+BZzAS0lvcW37CNjJ79seAYdA1MR7s744uxE18GBNJUVxCF6BkySYAhPgGQhJviaSbvMbJYI4HwHuwhvumaRo6GeVCIZG8yLpvFbQQmxfAE+ZdSFpXCs4bjZAmtFntgmQ1CZTFFEO6NkEWwErEWwj6vtUlEc0dERLnv//T7+ky99qvgFoXMgZAzL0uQAAAABJRU5ErkJggg=="/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-body-secondary" href="https://github.com/yuwria" style="padding-right: 25px;">
-                        <svg class="bi" width="24" height="24">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbdJREFUSEu1VQtRw0AU3FUAKAAUAAqgCgAFFAVQBYACigOqAFBAUUBx0DooCh6z7bvwcrk2gZncTCYzl7vdt/s+IXpe7BkfrQRmdgHgHMCxP4pp5s+U5GRbkBsJHPgRwEGLyjmAEcnX0rkigZndA7j7o31jkqP8ToPgn+AJ94nkbSSpEZjZGYB3P/AGQEqGAG5878vfR/6W/89+5sr3LqNdOYH83PeDDyRFADPbJbmMkcW9TPWc5GE6WxF4Ul8CyISkom9dBVuvSUrZb5mamTaSTH0bkJy2oq8VqoQ/S8FFBQI7TV6T1KXOy8zi/RnJk1yBPN5xxA+SSnjnlRGA5Cr4qMACWi8EUeKS5F7n8Nd5iA4sSK4mQFSQJ1ntP+5CYmZqLo2VtKoK3FSm354P9YG6s9YDCUW94JWXB9IsU10yMzWaEj0AoKhS2aqrh4nIgaVYVSeSuCp7ahY5QRoVilhllkCqrg7R55amT7X+KQ275GdxOgaC0sTdPuzC5USiH4vUKGmr1t9C0FDZsCgDkF0C1fArWZQULDw/xbHS5ZcpIvWF1EQFGiUHm/5k6WArQZc+2Hamd4IfXwTFGbCHxBkAAAAASUVORK5CYII="/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </footer>
 </body>
 
 </html>
