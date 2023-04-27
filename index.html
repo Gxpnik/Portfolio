@@ -7,162 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="style.css" <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="YTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Lato", sans-serif;
-        }
-        
-        body,
-        html {
-            height: 100%;
-            color: #777;
-            line-height: 1.8;
-        }
-        /* Create a Parallax Effect */
-        
-        .logo-img,
-        .bgimg-2,
-        .bgimg-3 {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        /* First image (Logo. Full height) */
-        
-        .logo-img {
-            background-image: url("Images/Background_logo.jpg");
-            min-height: 1000px;
-        }
-        /* Second image (Portfolio) */
-        
-        .bgimg-2 {
-            background-image: url("Images/Background_portfolio.jpg");
-            min-height: 700px;
-        }
-        /* Third image (Contact) */
-        
-        .bgimg-3 {
-            background-image: url("Images/Background_contact.jpg");
-            min-height: 700px;
-        }
-        
-        .w3-wide {
-            letter-spacing: 10px;
-        }
-        
-        .w3-hover-opacity {
-            cursor: pointer;
-        }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        
-        form {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        .form-group {
-            margin: 10px 0;
-        }
-        
-        label {
-            display: block;
-            font-weight: bold;
-        }
-        
-        input[type="text"],
-        input[type="password"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            width: 100%;
-        }
-        
-        button[type="submit"] {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px 0;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        
-        button[type="submit"]:hover {
-            background-color: #3e8e41;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container" id="login-form">
-        <div class=\ " row ">
-            <div>
-                <h2>Login</h2>
-                <p>Please fill this form to have access to the site</p>
-                <form>
-                    <div class="form-group ">
-                        <label for="username ">Username</label>
-                        <input type="text " name="username " id="username " class="form-control " required>
+    <div id="login-form" class="container-login100" style="background-image: url('images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+
+            <span class="login100-form-title p-b-37">
+                Sign In
+            </span>
+            <label for="username" class="label validate-input">
+                <span class="label-title">Username</span>
+                <input id="user" class="input" name="text" placeholder="Enter your username..." type="text">
+            </label>
+            <label for="password" class="label validate-input">
+                <span class="label-title">Password</span>
+                <input id="pass" class="input" name="text" placeholder="Enter your password..." type="password">
+            </label>
+            <div class="container-login100-form-btn">
+                <button onclick="login()" class="cssbuttons-io-button"> Get started
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
                     </div>
-                    <div class="form-group ">
-                        <label for="password ">Password</label>
-                        <input type="password" name="password " id="password " class="form-control " required>
-                    </div>
-                    <div class="form-group ">
-                        <button type="submit " onclick="login(); return false;">Submit</button>
-                    </div>
-                </form>
+                  </button>
                 <script>
                     function login() {
-                        var user = document.getElementById("username ").value;
-                        var password = document.getElementById("password ").value;
+                        // Get the username and password input values
+                        var username = document.getElementById("user").value;
+                        var password = document.getElementById("pass").value;
 
-                        if (user == "test" && password == "test") {
-                            document.getElementById("login-form").style.display = "none ";
+                        // Check if the username and password are correct
+                        if (username === "test" && password === "test") {
+                            document.getElementById("login-form").style.display = "none";
                             document.getElementById("main-page").style.display = "block";
                             document.getElementById("main-header").style.display = "block";
                         } else {
-                            alert("Invalid username or password ");
+                            alert("Incorrect username or password. Please try again.");
                         }
-                    }
+                    };
+
                 </script>
             </div>
         </div>
     </div>
-
     <header>
         <div class="w3-top " id="main-header" style="display: none; ">
             <div class="w3-bar " id="myNavbar ">
-                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right " href="javascript:void(0); " onclick="toggleFunction() " title="Toggle Navigation Menu ">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right "
+                    href="javascript:void(0); " onclick="toggleFunction() " title="Toggle Navigation Menu ">
                     <i class="fa fa-bars "></i>
                 </a>
                 <a href="#home " class="w3-bar-item w3-button ">HOME</a>
                 <a href="#about " class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-user "></i> ABOUT</a>
-                <a href="#portfolio " class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-th "></i> PORTFOLIO</a>
-                <a href="#contact " class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-envelope "></i> CONTACT</a>
+                <a href="#portfolio " class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-th "></i>
+                    PORTFOLIO</a>
+                <a href="#contact " class="w3-bar-item w3-button w3-hide-small "><i class="fa fa-envelope "></i>
+                    CONTACT</a>
             </div>
         </div>
     </header>
@@ -170,35 +84,44 @@
         <div id="main-page" style="display: none; ">
             <div class="logo-img w3-display-container w3-opacity-min " id="home ">
                 <div class="w3-display-middle " style="white-space:nowrap; ">
-                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity ">WELCOME <span class="w3-hide-small ">!!!</span>
+                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity ">WELCOME
+                        <span class="w3-hide-small ">!!!</span>
                 </div>
             </div>
             <div class="w3-container w3-padding-64 " id="about ">
                 <h3 class="w3-content w3-center ">ABOUT ME</h3>
                 <p class="w3-content w3-center "><em>I love learning</em></p>
-                <p class="w3-content ">Hello! My name is Rodrigo and I'm a 20-year-old who loves to learn new things every day. I'm always striving to improve myself with no limits to what I can achieve.
+                <p class="w3-content ">Hello! My name is Rodrigo and I'm a 20-year-old who loves to learn new things
+                    every day. I'm always striving to improve myself with no limits to what I can achieve.
                 </p>
                 <div class="w3-row w3-content ">
                     <div class="w3-col m6 w3-center w3-padding-large ">
                         <p><b><i class="fa fa-user w3-margin-right "></i>Rodrigo</b></p><br>
-                        <img src="Images/avatar_coding.png " class="w3-round w3-image w3-opacity w3-hover-opacity-off " alt="Photo of Me " width="500 " height="333 ">
+                        <img src="Images/avatar_coding.png " class="w3-round w3-image w3-opacity w3-hover-opacity-off "
+                            alt="Photo of Me " width="500 " height="333 ">
                     </div>
                     <div class="w3-col m6 w3-hide-small w3-padding-large ">
-                        <p>I'm currently studing Web Development, being this one of the projects that is helping me study. I'm also studying Linux, being Arch my main distro at the moment. I currently work as an IT helper but I hope to use it as a method
+                        <p>I'm currently studing Web Development, being this one of the projects that is helping me
+                            study. I'm also studying Linux, being Arch my main distro at the moment. I currently work as
+                            an IT helper but I hope to use it as a method
                             of learning more about softwares and Operation Systems.
 
-                            <p>I have a CCNA in "Introduction to Networks " that I took while taking a level 5 course in Management of Networks and Computer Systems.</p>
-                            <p>I also have a certification in 'Python Essentials 1', aiming to take more about it and other languages.</p>
-                            <p>My current objectives are:</p>
+                        <p>I have a CCNA in "Introduction to Networks " that I took while taking a level 5 course in
+                            Management of Networks and Computer Systems.</p>
+                        <p>I also have a certification in 'Python Essentials 1', aiming to take more about it and other
+                            languages.</p>
+                        <p>My current objectives are:</p>
 
-                            <ul>
-                                <li>Learning JavaScript <i class='bx bxl-javascript bx-sm'></i> and CSS <i class='bx bxl-css3 bx-sm'></i> </li>
-                                <li>Keep studying about Operating Systems</li>
-                                <li>Learn a bit more about python<i class='bx bxl-python bx-sm'></i></li>
-                                <li>Start learning MySQL and how to make it work with a website</li>
-                            </ul>
+                        <ul>
+                            <li>Learning JavaScript <i class='bx bxl-javascript bx-sm'></i> and CSS <i
+                                    class='bx bxl-css3 bx-sm'></i> </li>
+                            <li>Keep studying about Operating Systems</li>
+                            <li>Learn a bit more about python<i class='bx bxl-python bx-sm'></i></li>
+                            <li>Start learning MySQL and how to make it work with a website</li>
+                        </ul>
 
-                            <p>You can find more about me <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>.</p>
+                        <p>You can find more about me <a
+                                href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>.</p>
 
                         </p>
                     </div>
@@ -246,19 +169,23 @@
                         <div class="w3-col m8 w3-panel ">
                             <div class="w3-large w3-margin-bottom ">
                                 <i class='bx bx-envelope bx-sm'></i> Email: rodrigo.n.dias2012@gmail.com<br>
-                                <i class='bx bxl-linkedin-square'></i> LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>
+                                <i class='bx bxl-linkedin-square'></i> LinkedIn: <a
+                                    href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>
                             </div>
                             <p>Leave me a note:</p>
                             <form action="/action_page.php " target="_blank ">
                                 <div class="w3-row-padding " style="margin:0 -16px 8px -16px ">
                                     <div class="w3-half ">
-                                        <input class="w3-input w3-border " type="text " placeholder="Name " required name="Name ">
+                                        <input class="w3-input w3-border " type="text " placeholder="Name " required
+                                            name="Name ">
                                     </div>
                                     <div class="w3-half ">
-                                        <input class="w3-input w3-border " type="text " placeholder="Email " required name="Email ">
+                                        <input class="w3-input w3-border " type="text " placeholder="Email " required
+                                            name="Email ">
                                     </div>
                                 </div>
-                                <input class="w3-input w3-border " type="text " placeholder="Message " required name="Message ">
+                                <input class="w3-input w3-border " type="text " placeholder="Message " required
+                                    name="Message ">
                                 <button class="w3-button w3-black w3-right w3-section " type="submit ">
                                     <i class="fa fa-paper-plane "></i> SEND MESSAGE
                                 </button>
