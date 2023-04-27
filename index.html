@@ -68,43 +68,44 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div id="login-form">
+    <div class="container" id="login-form">
+        <div class=\ " row ">
+            <div>
                 <h2>Login</h2>
                 <p>Please fill this form to have access to the site</p>
-                <form action="" method="post">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" name="Username" class="form-control" req>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type=" password " name="password " class="form-control " req>
+                <form>
+                    <div class="form-group ">
+                        <label for="username ">Username</label>
+                        <input type="text " name="username " id="username " class="form-control " required>
                     </div>
                     <div class="form-group ">
-                        <button type="submit " onclick="login() ">Submit</button>
+                        <label for="password ">Password</label>
+                        <input type="password " name="password " id="password " class="form-control " required>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit " onclick="login(); return false; ">Submit</button>
                     </div>
                 </form>
                 <script>
                     function login() {
-                        var username = document.getElementById("username ").ariaValueMax;
-                        var password = document.getElementById("password ").ariaValueMax;
-                    }
+                        var user = document.getElementById("username ").value;
+                        var password = document.getElementById("password ").value;
 
-                    if (username == "Test " && password == "thisisatest ") {
-                        document.getElementById("login-form ").style.display = "none ";
-                        document.getElementById("main-page ").style.display = "block ";
-                        document.getElementById("main-header ").style.display = "block ";
-                    } else {
-                        alert("Invalid username or password ");
+                        if (user == 'test' && password == 'test') {
+                            document.getElementById("login-form ").style.display = "none ";
+                            document.getElementById("main-page ").style.display = "block ";
+                            document.getElementById("main-header ").style.display = "block ";
+                        } else {
+                            alert("Invalid username or password ");
+                        }
                     }
                 </script>
             </div>
         </div>
     </div>
-    <header id="main-header " style="display: none; ">
-        <div class="w3-top ">
+
+    <header>
+        <div class="w3-top " id="main-header " style="display: none; ">
             <div class="w3-bar " id="myNavbar ">
                 <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right " href="javascript:void(0); " onclick="toggleFunction() " title="Toggle Navigation Menu ">
                     <i class="fa fa-bars "></i>
@@ -116,107 +117,109 @@
             </div>
         </div>
     </header>
-    <main id="main-page style=" display: none; ">
-                        <div class="logo-img w3-display-container w3-opacity-min " id="home ">
-                            <div class="w3-display-middle " style="white-space:nowrap; ">
-                                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity ">WELCOME <span class="w3-hide-small ">!!!</span>
-                            </div>
+    <main>
+        <div id="main-page " style="display: none; ">
+            <div class="logo-img w3-display-container w3-opacity-min " id="home ">
+                <div class="w3-display-middle " style="white-space:nowrap; ">
+                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity ">WELCOME <span class="w3-hide-small ">!!!</span>
+                </div>
+            </div>
+            <div class="w3-container w3-padding-64 " id="about ">
+                <h3 class="w3-content w3-center ">ABOUT ME</h3>
+                <p class="w3-content w3-center "><em>I love learning</em></p>
+                <p class="w3-content ">Hello! My name is Rodrigo and I'm a 20-year-old who loves to learn new things every day. I'm always striving to improve myself with no limits to what I can achieve.
+                </p>
+                <div class="w3-row w3-content ">
+                    <div class="w3-col m6 w3-center w3-padding-large ">
+                        <p><b><i class="fa fa-user w3-margin-right "></i>Rodrigo</b></p><br>
+                        <img src="Images/avatar_coding.png " class="w3-round w3-image w3-opacity w3-hover-opacity-off " alt="Photo of Me " width="500 " height="333 ">
+                    </div>
+                    <div class="w3-col m6 w3-hide-small w3-padding-large ">
+                        <p>I'm currently studing Web Development, being this one of the projects that is helping me study. I'm also studying Linux, being Arch my main distro at the moment. I currently work as an IT helper but I hope to use it as a method
+                            of learning more about softwares and Operation Systems.
+
+                            <p>I have a CCNA in "Introduction to Networks " that I took while taking a level 5 course in Management of Networks and Computer Systems.</p>
+                            <p>I also have a certification in 'Python Essentials 1', aiming to take more about it and other languages.</p>
+                            <p>My current objectives are:</p>
+
+                            <ul>
+                                <li>Learning JavaScript <i class='bx bxl-javascript bx-sm'></i> and CSS <i class='bx bxl-css3 bx-sm'></i> </li>
+                                <li>Keep studying about Operating Systems</li>
+                                <li>Learn a bit more about python<i class='bx bxl-python bx-sm'></i></li>
+                                <li>Start learning MySQL and how to make it work with a website</li>
+                            </ul>
+
+                            <p>You can find more about me <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>.</p>
+
+                        </p>
+                    </div>
+                </div>
+
+                <p class="w3-content w3-large w3-center w3-padding-16 ">My knowledge is currently: </p>
+                <p class="w3-content w3-wide "><i class="fa fa-camera "></i>IT Support</p>
+                <div class="w3-content w3-light-grey ">
+                    <div class="w3-container w3-padding-small w3-dark-grey w3-center " style="width:75% ">75%</div>
+                </div>
+                <p class="w3-content w3-wide "><i class="fa fa-laptop "></i>Web Design</p>
+                <div class="w3-content w3-light-grey ">
+                    <div class="w3-container w3-padding-small w3-dark-grey w3-center " style="width:55% ">55%</div>
+                </div>
+                <p class="w3-content w3-wide "><i class="fa fa-photo "></i>Programming</p>
+                <div class="w3-content w3-light-grey ">
+                    <div class="w3-container w3-padding-small w3-dark-grey w3-center " style="width:40% ">40%</div>
+                </div><br><br>
+
+                <div class="bgimg-2 w3-display-container w3-opacity-min ">
+                    <div class="w3-display-middle " style="white-space:nowrap; ">
+                        <span class="w3-xxlarge w3-text-white w3-wide ">PORTFOLIO</span>
+                    </div>
+                </div>
+
+                <div class="w3-content w3-container w3-padding-64 " id="portfolio ">
+                    <h3 class="w3-center ">MY WORK</h3>
+                    <p class="w3-center "><em>(Still in Development)</em></p>
+                </div>
+
+                <div class="bgimg-3 w3-display-container w3-opacity-min ">
+                    <div class="w3-display-middle ">
+                        <span class="w3-xxlarge w3-text-white w3-wide ">CONTACT</span>
+                    </div>
+                </div>
+
+                <div class="w3-content w3-container w3-padding-64 " id="contact ">
+                    <h3 class="w3-center ">CONTACT ME!!</h3>
+                    <p class="w3-center "><em>I'd love your feedback!</em></p>
+
+                    <div class="w3-row w3-padding-32 w3-section ">
+                        <div class="w3-col m4 w3-container ">
+                            <img src="Images/Contact_Me.png " class="w3-image w3-round " style="width:100% ">
                         </div>
-                        <div class="w3-container w3-padding-64 " id="about ">
-                            <h3 class="w3-content w3-center ">ABOUT ME</h3>
-                            <p class="w3-content w3-center "><em>I love learning</em></p>
-                            <p class="w3-content ">Hello! My name is Rodrigo and I'm a 20-year-old who loves to learn new things every day. I'm always striving to improve myself with no limits to what I can achieve.
-                            </p>
-                            <div class="w3-row w3-content ">
-                                <div class="w3-col m6 w3-center w3-padding-large ">
-                                    <p><b><i class="fa fa-user w3-margin-right "></i>Rodrigo</b></p><br>
-                                    <img src="Images/avatar_coding.png " class="w3-round w3-image w3-opacity w3-hover-opacity-off " alt="Photo of Me " width="500 " height="333 ">
-                                </div>
-                                <div class="w3-col m6 w3-hide-small w3-padding-large ">
-                                    <p>I'm currently studing Web Development, being this one of the projects that is helping me study. I'm also studying Linux, being Arch my main distro at the moment. I currently work as an IT helper but I hope to use it
-                                        as a method of learning more about softwares and Operation Systems.
-
-                                        <p>I have a CCNA in "Introduction to Networks " that I took while taking a level 5 course in Management of Networks and Computer Systems.</p>
-                                        <p>I also have a certification in 'Python Essentials 1', aiming to take more about it and other languages.</p>
-                                        <p>My current objectives are:</p>
-
-                                        <ul>
-                                            <li>Learning JavaScript <i class='bx bxl-javascript bx-sm'></i> and CSS <i class='bx bxl-css3 bx-sm'></i> </li>
-                                            <li>Keep studying about Operating Systems</li>
-                                            <li>Learn a bit more about python<i class='bx bxl-python bx-sm'></i></li>
-                                            <li>Start learning MySQL and how to make it work with a website</li>
-                                        </ul>
-
-                                        <p>You can find more about me <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>.</p>
-
-                                    </p>
-                                </div>
+                        <div class="w3-col m8 w3-panel ">
+                            <div class="w3-large w3-margin-bottom ">
+                                <i class='bx bx-envelope bx-sm'></i> Email: rodrigo.n.dias2012@gmail.com<br>
+                                <i class='bx bxl-linkedin-square'></i> LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>
                             </div>
-
-                            <p class="w3-content w3-large w3-center w3-padding-16 ">My knowledge is currently: </p>
-                            <p class="w3-content w3-wide "><i class="fa fa-camera "></i>IT Support</p>
-                            <div class="w3-content w3-light-grey ">
-                                <div class="w3-container w3-padding-small w3-dark-grey w3-center " style="width:75% ">75%</div>
-                            </div>
-                            <p class="w3-content w3-wide "><i class="fa fa-laptop "></i>Web Design</p>
-                            <div class="w3-content w3-light-grey ">
-                                <div class="w3-container w3-padding-small w3-dark-grey w3-center " style="width:55% ">55%</div>
-                            </div>
-                            <p class="w3-content w3-wide "><i class="fa fa-photo "></i>Programming</p>
-                            <div class="w3-content w3-light-grey ">
-                                <div class="w3-container w3-padding-small w3-dark-grey w3-center " style="width:40% ">40%</div>
-                            </div><br><br>
-
-                            <div class="bgimg-2 w3-display-container w3-opacity-min ">
-                                <div class="w3-display-middle " style="white-space:nowrap; ">
-                                    <span class="w3-xxlarge w3-text-white w3-wide ">PORTFOLIO</span>
-                                </div>
-                            </div>
-
-                            <div class="w3-content w3-container w3-padding-64 " id="portfolio ">
-                                <h3 class="w3-center ">MY WORK</h3>
-                                <p class="w3-center "><em>(Still in Development)</em></p>
-                            </div>
-
-                            <div class="bgimg-3 w3-display-container w3-opacity-min ">
-                                <div class="w3-display-middle ">
-                                    <span class="w3-xxlarge w3-text-white w3-wide ">CONTACT</span>
-                                </div>
-                            </div>
-
-                            <div class="w3-content w3-container w3-padding-64 " id="contact ">
-                                <h3 class="w3-center ">CONTACT ME!!</h3>
-                                <p class="w3-center "><em>I'd love your feedback!</em></p>
-
-                                <div class="w3-row w3-padding-32 w3-section ">
-                                    <div class="w3-col m4 w3-container ">
-                                        <img src="Images/Contact_Me.png " class="w3-image w3-round " style="width:100% ">
+                            <p>Leave me a note:</p>
+                            <form action="/action_page.php " target="_blank ">
+                                <div class="w3-row-padding " style="margin:0 -16px 8px -16px ">
+                                    <div class="w3-half ">
+                                        <input class="w3-input w3-border " type="text " placeholder="Name " required name="Name ">
                                     </div>
-                                    <div class="w3-col m8 w3-panel ">
-                                        <div class="w3-large w3-margin-bottom ">
-                                            <i class='bx bx-envelope bx-sm'></i> Email: rodrigo.n.dias2012@gmail.com<br>
-                                            <i class='bx bxl-linkedin-square'></i> LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-dias-9a231426b/ ">here</a>
-                                        </div>
-                                        <p>Leave me a note:</p>
-                                        <form action="/action_page.php " target="_blank ">
-                                            <div class="w3-row-padding " style="margin:0 -16px 8px -16px ">
-                                                <div class="w3-half ">
-                                                    <input class="w3-input w3-border " type="text " placeholder="Name " required name="Name ">
-                                                </div>
-                                                <div class="w3-half ">
-                                                    <input class="w3-input w3-border " type="text " placeholder="Email " required name="Email ">
-                                                </div>
-                                            </div>
-                                            <input class="w3-input w3-border " type="text " placeholder="Message " required name="Message ">
-                                            <button class="w3-button w3-black w3-right w3-section " type="submit ">
-                    <i class="fa fa-paper-plane "></i> SEND MESSAGE
-                  </button>
-                                        </form>
+                                    <div class="w3-half ">
+                                        <input class="w3-input w3-border " type="text " placeholder="Email " required name="Email ">
                                     </div>
                                 </div>
-                            </div>
-
-                            </main>
+                                <input class="w3-input w3-border " type="text " placeholder="Message " required name="Message ">
+                                <button class="w3-button w3-black w3-right w3-section " type="submit ">
+                                    <i class="fa fa-paper-plane "></i> SEND MESSAGE
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
