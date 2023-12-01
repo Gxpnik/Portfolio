@@ -16,6 +16,10 @@ body,
         }
         /* Create a Parallax Effect */
         
+        .objectives{
+            font-size: 30;
+        }
+
         .logo-img,
         .bgimg-2,
         .bgimg-3 {
